@@ -3,37 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Calculator</title>
+    <title>Modern PHP Calculator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f4f4f9;
         }
         .calculator {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
+            background: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .calculator input, .calculator select, .calculator button {
+            padding: 20px 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
             width: 100%;
-            margin: 10px 0;
-            padding: 10px;
+        }
+        .calculator h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .calculator form {
+            display: grid;
+            gap: 15px;
+        }
+        .calculator input, 
+        .calculator select, 
+        .calculator button {
+            padding: 10px 15px;
             font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .calculator button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .calculator button:hover {
+            background: #0056b3;
         }
         .result {
             text-align: center;
             margin-top: 20px;
             font-size: 1.2rem;
-            font-weight: bold;
+            color: #007bff;
         }
     </style>
 </head>
 <body>
     <div class="calculator">
-        <h2>PHP Calculator</h2>
+        <h2>Modern PHP Calculator</h2>
         <form method="POST">
             <input type="number" name="num1" placeholder="Enter first number" required>
             <input type="number" name="num2" placeholder="Enter second number" required>
